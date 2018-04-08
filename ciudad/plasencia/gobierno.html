@@ -1,0 +1,15 @@
+<div class="contenedorTablas" ng-controller="gobierno" > 
+
+<table>
+  <tr>
+    <th ng-repeat="titulo in titulos">{{titulo}}</th>
+  
+  </tr>
+  <tr ng-repeat="ministro in gobernantes">
+    <td>{{ministro.nombre}}</td>
+    <td>{{ministro.ministerio}}</td>
+  </tr>
+  
+</table> 
+    
+</div>
