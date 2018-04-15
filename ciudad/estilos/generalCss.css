@@ -1,89 +1,61 @@
-/*
- Created on : 06-Abr-2018
- Author     : Ismael Martin Ramirez [imartinr01@informatica.iesvalledeljerteplasencia.es]
+/* Created on : 06-Abr-2018
+ * Author     : Ismael Martin Ramirez [imartinr01@informatica.iesvalledeljerteplasencia.es]
  */
+html {
+  padding: 2%;
+  background-color: #babbbf; }
 
-/*General*/
-html{
-   /* overflow-y:scroll; */  
-    width: 100%;
-    background-color: #f0f0f0;
-    
-    
-   
-}
-body{
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-}
-a{
-     text-decoration: none;
-}
+body {
+  color: #272c31;
+  border-radius: 4px 4px 4px 4px; }
 
-/*Cabecera*/
-header {
-    background-color: aqua;
-    height: 48px;
-    display: inline-flex;
-    width: 100%;
-    
- /*Tocar con Sas todos sus hijos (estoy78&seguro)*/
+.navbar {
+  border-radius: 4px 4px 0px 0px;
+  background-color: #f8f8f8; }
+  .navbar a {
+    color: #272c31; }
+  .navbar .navbar-toggler-icon {
+    background: url("../../imagenes/menuIcon.jpg"); }
+  .navbar li {
+    border-radius: 4px 4px 4px 4px; }
+  .navbar li:hover {
+    background-color: #babbbf; }
 
-}
-h1{
-    margin: 0px;
-    padding: 0px;
-/*Quitar cuando el css este en sass (estoy78&seguro)*/
+.export {
+  background-color: #d5d7db; }
+  .export ul {
+    text-align: center; }
 
-}
+.jumbotron {
+  background-color: #f8f8f8;
+  border-radius: none; }
 
-/*Menu Principal*/
-.menuPrincipal{
-    width: 100%;
-    height: 48px;
-    margin: 0px;
-    padding: 0px;
-    background-color: blueviolet;
-    
-    /*Tocar con Sas todos sus hijos (estoy78&seguro)*/
+footer {
+  width: 100%;
+  padding: 36px;
+  background-color: #d5d7db;
+  text-align: center;
+  border-radius: 0px 0px 4px 4px; }
 
-}
-.menuPrincipal ol{
-    list-style: none;
-    display: inline-flex;
-}
+table {
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 11px;
+  margin: 24px 0; }
 
-/*Contenedor de opciones de exportacion*/
-.export{
-    width: 100%;
-    background-color: greenyellow;
-    
-}
-.export ol{
-    list-style: none;
-    display: inline-flex;
-}
-.export ol li{
-   margin-right: 20px;
-}
+.contenedorExport h3, .contenedorExport h4 {
+  text-align: center; }
+.contenedorExport .row {
+  margin: 1%; }
+.contenedorExport pre {
+  width: 100%;
+  margin: 1%;
+  padding: 1%;
+  background-color: #d5d7db;
+  font-size: 11px;
+  border-radius: 4px 4px 4px 4px; }
 
-/* Pier de pagina  / footer*/
-footer{
-    width: 100%;
-    text-align: center;
-    background-color: black;
-    color: white;
-}
+.container {
+  max-width: 100%; }
 
-/*Contenedor donde se alojan select * from todas las tablas de la BD*/
-.contenedorTablas{
-    margin: 3%;
-    padding: 1%;
-    height: 75%;
-    background-color: burlywood;
-    
-    /*Tocar con Sas todos sus hijos (estoy78&seguro)*/
-}
-
-
+/*# sourceMappingURL=generalcss.css.map */

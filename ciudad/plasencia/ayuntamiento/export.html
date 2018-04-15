@@ -1,0 +1,101 @@
+<!-- 
+Created on : 15-abr-2018
+Author     : Ismael Martin Ramirez [imartinr01@informatica.iesvalledeljerteplasencia.es]
+-->
+<section ng-controller="gobierno">
+    
+ <!--Menu de navegacion con las opciones de exports-->
+    <nav class="navbar navbar-expand-md export" >
+    
+            <!--Boton que reemplaza la lista de opciones con las resolucones de pantalla de table o movil-->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbarExport">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+           <!--Listado de opciones-->
+      <div class="collapse navbar-collapse" id="collapsibleNavbarExport">
+            <ul class="navbar-nav">
+          <li class="nav-item" ng-model="xmlAyuntamiento" ng-click="verAyuntamientoXml()">
+            <span class="nav-link">{{export[0]}}</span>
+          </li>
+
+          <li class="nav-item" ng-model="jsonAyuntamiento" ng-click="verAyuntamientoJson()">
+            <span class="nav-link">{{export[1]}}</span>
+          </li>
+
+              <li class="nav-item" ng-model="csvAyuntamiento" ng-click="verAyuntamientoCsv()">
+            <span class="nav-link">{{export[2]}}</span>
+          </li>
+              <li class="nav-item" ng-model="htmlAyuntamiento" ng-click="verAyuntamientoHtml()">
+            <span class="nav-link">{{export[3]}}</span>
+          </li>
+
+         
+
+            </ul>
+          </div>  
+    </nav>
+    
+    <!--Seccion que se oculta y muestra al pulsar sobre las opciones la lista anterior-->
+    <!--XML-->
+    <div ng-if="xmlAyuntamiento" class="contenedorExport">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4"><h3>Ayuntamiento de Plasencia</h3></div>
+            <div class="col-sm-4"><h4>XML</h4></div>
+            <div class="col-sm-4">
+                 <a href="#!/opendata/plasencia/gobierno/xml" target="_blank" class="btn btn-info btn-lg col-xs-12">
+                 <span class="glyphicon glyphicon-new-window"></span> Ver en Web
+                </a>
+            </div>
+            <pre class="col-xs-12">{{dataXml}}</pre>
+        </div>
+    </div>
+    </div>      
+    <!--JSON-->
+    <div ng-if="jsonAyuntamiento" class="contenedorExport">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4"><h3>Ayuntamiento de plasencia</h3></div>
+            <div class="col-sm-4"><h4>JSON</h4></div>
+            <div class="col-sm-4">
+                 <a href="#!/opendata/plasencia/gobierno/json" target="_blank" class="btn btn-info btn-lg col-xs-12">
+                 <span class="glyphicon glyphicon-new-window"></span> Ver en Web
+                </a>
+            </div>
+            <pre class="col-xs-12">{{dataJson}}</pre>
+        </div>
+    </div>
+    </div>   
+    <!--CSV-->
+    <div ng-if="csvAyuntamiento" class="contenedorExport">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4"><h3>Ayuntamiento de plasencia</h3></div>
+            <div class="col-sm-4"><h4>CSV</h4></div>
+            <div class="col-sm-4">
+                 <a href="#!/opendata/plasencia/gobierno/csv" target="_blank" class="btn btn-info btn-lg col-xs-12">
+                 <span class="glyphicon glyphicon-new-window"></span> Ver en Web
+                </a>
+            </div>
+            <pre class="col-xs-12">{{dataCsv}}</pre>
+        </div>
+    </div>
+    </div>
+    <!--html-->
+    <div ng-if="htmlAyuntamiento" class="contenedorExport">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4"><h3>Ayuntamiento de plasencia</h3></div>
+            <div class="col-sm-4"><h4>HTML</h4></div>
+            <div class="col-sm-4">
+                 <a href="#!/opendata/plasencia/gobierno/html" target="_blank" class="btn btn-info btn-lg col-xs-12">
+                 <span class="glyphicon glyphicon-new-window"></span> Ver en Web
+                </a>
+            </div>
+            <pre class="col-xs-12">{{dataHtml}}</pre>
+        </div>
+    </div>
+    </div>   
+
+</section>

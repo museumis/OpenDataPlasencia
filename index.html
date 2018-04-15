@@ -1,35 +1,45 @@
+<!-- 
+Created on : 15-abr-2018
+Author     : Ismael Martin Ramirez [imartinr01@informatica.iesvalledeljerteplasencia.es]
+-->
 <!DOCTYPE html>
 <html lang="es" xmlns="http://www.w3.org/1999/xhtml" data-ng-app="dataPlasencia">
     <head>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
         <title>Data | Plasencia</title>
         
         <meta name="author" content="Ismael Martín Ramírez" />
         <meta name="description" content="Data Plasencia" />
         <meta name="generator" content="Atom" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- Listado de modulos necerarios. Css,Angular,AngularIncludes-->
-        <link href="ciudad/estilos/generalCss.css" rel="stylesheet" type="text/css"/>
+      
+         <!--Angular-->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-        <script src="https://code.angularjs.org/1.2.21/angular-route.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+        
+        <!-- BootStrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+      
+          <!-- Estilo css-->
+        <link rel="stylesheet" type="text/css" href="ciudad/estilos/generalCss.css">
+          
       </head>
 
     <body >
-            <div ng-include src="'ciudad/view/cabecera.html'"></div>
-            <div ng-include src="'ciudad/view/menuPrincipal.html'"></div>
-    
+        <div ng-include src="'ciudad/view/menuPrincipal.html'"></div>
                     
-        <div ng-view></div>
-        
-        <div ng-include src="'ciudad/view/export.html'" ng-show="true"></div>
-        <div ng-include src="'ciudad/view/footer.html'" ng-show="true"></div>
+        <div ng-view></div>    
+                
+        <div ng-include src="'ciudad/view/footer.html'"></div>
 
 
-<script src="ciudad/script/app.js"></script>
-<script src="ciudad/script/controllers/controller.js"></script>
-<script src="ciudad/script/rautins/rautins.js"></script>
-
-       
+        <script src="ciudad/script/app.js"></script>
+        <script src="ciudad/script/controllers/controller.js"></script>
+        <script src="ciudad/script/rautins/rautins.js"></script>
+        <script src="ciudad/plasencia/ayuntamiento/controller.js"></script>
 
     </body>
 </html>

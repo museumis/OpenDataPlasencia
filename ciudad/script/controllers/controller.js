@@ -1,26 +1,19 @@
 console.log("Controller AngularJS iniciado.")
 
-app.controller("menuPrincipal",function($scope){
-                 $scope.irAyuntamiento = function(){
-                     console.log("wiiiiiii")
-                 }
-             })
-
-app.controller("export",function($scope){
+app.controller("menuprincipal",function($scope){
     
-    $scope.tiposExport = ["pdf","xml","json","csv","html","text"]
+    $scope.inicio = "#!/"
+    
+    $scope.menuPrincipal = [                                           
+        {"url":"#!/","nombre":"Inicio"},
+        {"url":"#!/opendata/plasencia/gobierno","nombre":"Ayuntamiento"},
+        {"url":"#!/opendata/plasencia/organismosSociales","nombre":"Organismos Sociales"},
+        {"url":"#!/opendata/plasencia/barrio","nombre":"Barrios"},
+        {"Sobre...":"#!/opendata/plasencia","nombre":"Sobre..."}
+        ]
 })
 
-app.controller("gobierno",function($scope){
-    $scope.titulos = [
-        "Ministerio","Desde","Hasta",
-        "Gmail","Teléfono","Fax",
-        "Web","Twitter","Facebook"
-    ]
-    $scope.gobernantes = [
-        {"nombre":"nom1","ministerio":"ministerio01"},
-        {"nombre":"nom2","ministerio":"ministerio02"},
-        {"nombre":"nom3","ministerio":"ministerio03"}
-    ]
-})
+
+
+
 

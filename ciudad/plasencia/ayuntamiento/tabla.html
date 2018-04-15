@@ -1,0 +1,34 @@
+<!-- 
+Created on : 15-abr-2018
+Author     : Ismael Martin Ramirez [imartinr01@informatica.iesvalledeljerteplasencia.es]
+-->
+<section ng-controller="gobierno" class="container"> 
+    <div class="table-responsive">
+        <table class="table table-hover table-striped table-bordered">
+            <caption>Gobierno de Plasencia</caption>
+
+                <tr>
+    <th>#</th>
+    <th ng-repeat="titulo in titulos">{{titulo}}</th>
+  
+  </tr>
+            
+                <tr ng-repeat="ministro in gobernantes">
+     <th>{{$index+1}}</th>
+    <td>{{ministro.nombre}}</td>
+    <td>{{ministro.ministerio}}</td>
+      <td>{{ministro.inicio}}</td>
+            <td>{{ministro.fin}}</td>
+            <td>{{ministro.correo}}</td>
+            <td>{{ministro.telefono}}</td>
+            <td>{{ministro.fax}}</td>
+            <td>{{ministro.web}}</td>
+            <td>{{ministro.twitter}}</td>
+            <td>{{ministro.facebook}}</td>
+
+
+  </tr>
+  
+        </table> 
+    </div>
+</section>

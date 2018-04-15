@@ -1,0 +1,72 @@
+/*
+ Created on : 06-Abr-2018
+ Author     : Ismael Martin Ramirez [imartinr01@informatica.iesvalledeljerteplasencia.es]
+ */
+
+$colorPrimary: #f8f8f8
+$colorPrimaryDark: #babbbf
+$colorSecundario: #d5d7db
+$colorText: #272c31
+
+html
+    padding: 2%
+    background-color: $colorPrimaryDark
+
+body
+    color: $colorText
+    border-radius: 4px 4px 4px 4px
+        
+.navbar
+    border-radius: 4px 4px 0px 0px
+    background-color: $colorPrimary
+    a
+        color: $colorText        
+    .navbar-toggler-icon
+        background: url("../../imagenes/menuIcon.jpg")
+    li
+        border-radius: 4px 4px 4px 4px
+
+    li:hover
+            background-color: $colorPrimaryDark
+    
+.export
+    background-color: $colorSecundario 
+    ul
+        text-align: center        
+    
+    
+.jumbotron 
+    background-color: $colorPrimary
+    border-radius: none
+    
+footer
+    width: 100%
+    padding: 36px
+    background-color: $colorSecundario
+    text-align: center       
+    border-radius: 0px 0px 4px 4px
+
+table
+    width: 100%
+    text-transform: uppercase
+    font-size: 11px
+    margin: 24px 0
+
+.contenedorExport    
+    h3, h4
+        text-align: center   
+    .row
+        margin: 1%
+    pre
+        width: 100%
+        margin: 1%
+        padding: 1%
+        background-color: $colorSecundario
+        font-size: 11px
+        border-radius: 4px 4px 4px 4px
+
+        
+    
+@media (min-width: 576px)
+.container
+    max-width: 100%
