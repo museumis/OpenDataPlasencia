@@ -214,7 +214,7 @@ app.controller("gobierno",function($scope,$http){
     /*Metodo que gestiona la conexion http y las variable que se mostraran en la seccion html exports*/   
     $scope.cargarJsonFromUrl = function() {
      //Metodo que se conecta a la base de datos.
-     $http.get('https://imartinr01.000webhostapp.com/OpenData/Plasencia/Ayuntamiento/Obtener_gobierno.php').then(function (flujo) {
+        $http.get('https://imartinr01.000webhostapp.com/OpenData/Plasencia/Ayuntamiento/Obtener_gobierno.php').then(function (flujo) {
         //Gestion de las variables en la web. La tabla y la seccion export.
         $scope.generarTabla(flujo)
         $scope.dataXml = $scope.convertirAXml(flujo)
@@ -222,7 +222,8 @@ app.controller("gobierno",function($scope,$http){
         $scope.dataCsv = $scope.convertirACsv(flujo)
         $scope.dataHtml = $scope.convertirAHtml(flujo)
         })
-    }      
+    }   
+      
     //-----------------------------------------------------------
     /*Lammada al metodo que se conecta a la base de datos.
     Esta accion se hace al terminar de leer este fichero.
