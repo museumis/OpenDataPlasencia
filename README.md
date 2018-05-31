@@ -14,7 +14,7 @@ Es un portal moderno que utiliza las tecnologías más actuales del momento para
 
 Esta diseña para poder verla atrevés de un navegador web o desde navegadores de dispositivos móviles gracias a la tecnología de Bootstrap con la que se conseguirá un diseño actual para todos los tipos de pantalla.
 
-Todo lo que necesitas para poder obtener los datos del gobierno de Plasencia en formato csv, por ejemplo, es ir a la página https://museumis.github.io/OpenDataPlasencia/#!/opendata/plasencia/gobierno/csv y navegar por ella sin compromiso.
+Todo lo que necesitas para poder obtener los datos del gobierno de Plasencia en formato csv, por ejemplo, es ir a la página [Csv Gobierno Plasencia](https://museumis.github.io/OpenDataPlasencia/#!/gobierno/csv). y navegar por ella sin compromiso.
 
 Toda una base de datos rellenada con datos obtenidos en la red, webs oficiales de la entidades de las que se compone esta base de datos, dan a esta web un potencial de uso adecuado a los años que corren.
 
@@ -22,4 +22,4 @@ La web es completamente funcional y ya puedes empezar a usarla. Actualmente sól
 
 Datos abierto que podrás disfrutar y aprovechar en tus proyectos.
 
-Web activada -> Data | Plasencia
+Web activada -> [Data | Plasencia](https://museumis.github.io/OpenDataPlasencia/#!/).
