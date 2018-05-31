@@ -1,0 +1,22 @@
+<!-- 
+Created on : 15-abr-2018
+Author     : Ismael Martin Ramirez [imartinr01@informatica.iesvalledeljerteplasencia.es]
+-->
+<hr>
+   <!--Seccion que se oculta y muestra al pulsar sobre las opciones la lista anterior-->
+    <!--XML-->
+    <div ng-controller="inicio">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-lg-12"><h1>{{cuerpo.data.respuesta[0].NOMBRE}}</h1></div>
+            <div class="col-xs-12 col-sm-12 col-lg-12"><h2>{{cuerpo.data.respuesta[0].PAIS}}</h2></div>
+            <div class="col-xs-12 col-sm-12 col-lg-12"><h3>
+                {{cuerpo.data.respuesta[0].CODIGO_POSTAL}}</h3>
+            </div>
+          
+            <div class="col-xs-6 col-sm-6 col-lg-6"><a href="{{cuerpo.data.respuesta[0].PAGINA_WEB}}" target="_blank">Web Ayuntamiento</a> </div>  
+             <div class="col-xs-6 col-sm-6 col-lg-6"><a href="{{cuerpo.data.respuesta[0].GOOGLE_MAP}}" target="_blank">Google Map</a> </div> 
+        </div>
+    </div>
+    </div>  
+        <hr>

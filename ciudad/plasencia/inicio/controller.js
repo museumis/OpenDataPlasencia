@@ -199,6 +199,7 @@ app.controller("inicio",function($scope,$http){
         $scope.dataJson =$scope.convertirAJson(flujo)
         $scope.dataCsv = $scope.convertirACsv(flujo)
         $scope.dataHtml = $scope.convertirAHtml(flujo)
+        $scope.cuerpo = flujo
         })
     }   
       
