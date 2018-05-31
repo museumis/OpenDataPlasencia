@@ -75,7 +75,7 @@ app.controller("inicio",function($scope,$http){
                         json+="        \""+$scope.titulos[3]+"\": \""+flujo.data.respuesta[i].POBLACION+"\""+"\n"
                         json+="        \""+$scope.titulos[4]+"\": \""+flujo.data.respuesta[i].FIESTAS_INICIO+"\","+"\n"
                         json+="        \""+$scope.titulos[5]+"\": \""+flujo.data.respuesta[i].FIESTAS_FIN+"\","+"\n"
-                        json+="        \""+$scope.titulos[6]+"\": \""+flujo.data.respuesta[i].PAGINA_WEBL+"\","+"\n"
+                        json+="        \""+$scope.titulos[6]+"\": \""+flujo.data.respuesta[i].PAGINA_WEB+"\","+"\n"
                         json+="        \""+$scope.titulos[7]+"\": \""+flujo.data.respuesta[i].GOOGLE_MAP+"\""+"\n"
                 
                 
