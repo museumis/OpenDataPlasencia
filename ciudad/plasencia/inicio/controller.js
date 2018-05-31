@@ -60,36 +60,37 @@ app.controller("inicio",function($scope,$http){
     //Funcion que retorna la cadena json obtenida en la conexion http simplificada  
     $scope.convertirAJson = function(flujo){
 
-        var json = "{\n\"organismosSocialesPlasencia\":\n   {"+"\n"
+        var json = "{\n\"ciudadDePlasencia\":\n   {"+"\n"
         
-        json+= "   \"organismo\":["+"\n"  
+        json+= "   \"ciudad\":["+"\n"  
           
             for (var i=0; i<flujo.data.respuesta.length; i++) {
                 
                 json+= "        {"+"\n"
                 
-                    if(i==flujo.data.respuesta.length-1){
                         
                         json+="        \""+$scope.titulos[0]+"\": \""+flujo.data.respuesta[i].NOMBRE+"\","+"\n"
-                        json+="        \""+$scope.titulos[1]+"\": \""+flujo.data.respuesta[i].DIRECCION+"\","+"\n"
-                        json+="        \""+$scope.titulos[2]+"\": \""+flujo.data.respuesta[i].TELEFONO+"\","+"\n"
-                        json+="        \""+$scope.titulos[3]+"\": \""+flujo.data.respuesta[i].Telf+"\""+"\n"
-                        
+                        json+="        \""+$scope.titulos[1]+"\": \""+flujo.data.respuesta[i].PAIS+"\","+"\n"
+                        json+="        \""+$scope.titulos[2]+"\": \""+flujo.data.respuesta[i].CODIGO_POSTAL+"\","+"\n"
+                        json+="        \""+$scope.titulos[3]+"\": \""+flujo.data.respuesta[i].POBLACION+"\""+"\n"
+                        json+="        \""+$scope.titulos[4]+"\": \""+flujo.data.respuesta[i].FIESTAS_INICIO+"\","+"\n"
+                        json+="        \""+$scope.titulos[5]+"\": \""+flujo.data.respuesta[i].FIESTAS_FIN+"\","+"\n"
+                        json+="        \""+$scope.titulos[6]+"\": \""+flujo.data.respuesta[i].PAGINA_WEBL+"\","+"\n"
+                        json+="        \""+$scope.titulos[7]+"\": \""+flujo.data.respuesta[i].GOOGLE_MAP+"\""+"\n"
+                
+                
+                    if(i==flujo.data.respuesta.length-1){
                       json+= "       }"+"\n"
                         
                     }else{
-                        
-                         json+="        \""+$scope.titulos[0]+"\": \""+flujo.data.respuesta[i].NOMBRE+"\","+"\n"
-                        json+="        \""+$scope.titulos[1]+"\": \""+flujo.data.respuesta[i].DIRECCION+"\","+"\n"
-                        json+="        \""+$scope.titulos[2]+"\": \""+flujo.data.respuesta[i].TELEFONO+"\","+"\n"
-                        json+="        \""+$scope.titulos[3]+"\": \""+flujo.data.respuesta[i].Telf+"\""+"\n"
+                
                      json+= "         },"+"\n"
 
                     }
 
             }
 
-                    json += "               ]"+"\n"
+                    json += "              ]"+"\n"
 
                 json += "   }"+"\n"
 
