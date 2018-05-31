@@ -8,14 +8,17 @@ console.log("JS Rautins iniciado.")
          app.config(['$routeProvider',
             function($routeProvider){             
                 $routeProvider.           
-            when('opendata/plasencia',{
-             templateUrl:'ciudad/plasencia/inicio/gobierno.html',
+            when('/ciudad',{
+             templateUrl:'ciudad/plasencia/inicio/inicio.html',
            }).
            when('/gobierno',{
              templateUrl:'ciudad/plasencia/ayuntamiento/gobierno.html',
            }).
-           when('/barrio',{
+           when('/barrios',{
              templateUrl:'ciudad/plasencia/barrio/barrio.html',
+           }).
+            when('/sobre/OpenDataPlasencia',{
+             templateUrl:'ciudad/plasencia/sobre/sobre.html',
            }).
            when('/organismosSociales',{
              templateUrl:'ciudad/plasencia/organismo/organismo.html',
@@ -32,16 +35,16 @@ console.log("JS Rautins iniciado.")
             when('/gobierno/html',{
              templateUrl:'ciudad/plasencia/ayuntamiento/export/html.html',
            }).
-             when('/barrio/html',{
+             when('/barrios/html',{
              templateUrl:'ciudad/plasencia/barrio/export/html.html',
            }).
-            when('/barrio/xml',{
+            when('/barrios/xml',{
              templateUrl:'ciudad/plasencia/barrio/export/xml.html',
            }).
-            when('/barrio/json',{
+            when('/barrios/json',{
              templateUrl:'ciudad/plasencia/barrio/export/json.html',
            }).
-            when('/barrio/csv',{
+            when('/barrios/csv',{
              templateUrl:'ciudad/plasencia/barrio/export/csv.html',
            }).
             when('/organismosSociales/xml',{

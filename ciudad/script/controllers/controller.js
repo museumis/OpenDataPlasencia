@@ -6,11 +6,11 @@ app.controller("menuprincipal",function($scope){
 
 
    $scope.menuPrincipal = [                                           
-        {"url":"#!/","nombre":"Inicio"},
+        {"url":"#!/ciudad","nombre":"Inicio"},
         {"url":"#!/gobierno","nombre":"Ayuntamiento"},
         {"url":"#!/organismosSociales","nombre":"Organismos Sociales"},
-        {"url":"#!/barrio","nombre":"Barrios"},
-        {"Sobre...":"#!/opendata/plasencia","nombre":"Sobre..."}
+        {"url":"#!/barrios","nombre":"Barrios"},
+        {"url":"#!/sobre/OpenDataPlasencia","nombre":"Sobre..."}
         ]
 })
 
