@@ -2,7 +2,7 @@
 Created on : 15-abr-2018
 Author     : Ismael Martin Ramirez [imartinr01@informatica.iesvalledeljerteplasencia.es]
 -->
-<section ng-controller="gobierno">
+<section ng-controller="org">
     
  <!--Menu de navegacion con las opciones de exports-->
     <nav class="navbar navbar-expand-md export" >
@@ -15,18 +15,18 @@ Author     : Ismael Martin Ramirez [imartinr01@informatica.iesvalledeljerteplase
            <!--Listado de opciones-->
       <div class="collapse navbar-collapse" id="collapsibleNavbarExport">
             <ul class="navbar-nav">
-          <li class="nav-item" ng-model="xmlAyuntamiento" ng-click="verAyuntamientoXml()">
+          <li class="nav-item" ng-model="xmlFormato" ng-click="verFormatoXml()">
             <span class="nav-link">{{export[0]}}</span>
           </li>
 
-          <li class="nav-item" ng-model="jsonAyuntamiento" ng-click="verAyuntamientoJson()">
+          <li class="nav-item" ng-model="jsonFormato" ng-click="verFormatoJson()">
             <span class="nav-link">{{export[1]}}</span>
           </li>
 
-              <li class="nav-item" ng-model="csvAyuntamiento" ng-click="verAyuntamientoCsv()">
+              <li class="nav-item" ng-model="csvFormato" ng-click="verFormatoCsv()">
             <span class="nav-link">{{export[2]}}</span>
           </li>
-              <li class="nav-item" ng-model="htmlAyuntamiento" ng-click="verAyuntamientoHtml()">
+              <li class="nav-item" ng-model="htmlFormato" ng-click="verFormatoHtml()">
             <span class="nav-link">{{export[3]}}</span>
           </li>
 
@@ -38,18 +38,18 @@ Author     : Ismael Martin Ramirez [imartinr01@informatica.iesvalledeljerteplase
     
     <!--Seccion que se oculta y muestra al pulsar sobre las opciones la lista anterior-->
     <!--XML-->
-    <div ng-if="xmlAyuntamiento" class="contenedorExport">
+    <div ng-if="xmlFormato" class="contenedorExport">
     <div class="container">
         <div class="row">
-            <div class="col-sm-3"><h3>Ayuntamiento de Plasencia</h3></div>
+            <div class="col-sm-3"><h3>{{tituloExport}}</h3></div>
             <div class="col-sm-3"><h4>XML</h4></div>
             <div class="col-sm-3">
-                 <a href="#!/gobierno/xml" target="_blank" class="btn btn-info btn-lg col-xs-12">
+                 <a href="{{hrefXML}}" target="_blank" class="btn btn-info btn-lg col-xs-12">
                  <span class="glyphicon glyphicon-new-window"></span> Ver en Web
                 </a>
             </div>
               <div class="col-sm-3">
-                 <a href="https://imartinr01.000webhostapp.com/OpenData/Plasencia/Ayuntamiento/Obtener_gobiernoXML.php" target="_blank" class="btn btn-info btn-lg col-xs-12">
+                 <a href="{{urlXML}}" target="_blank" class="btn btn-info btn-lg col-xs-12">
                  <span class="glyphicon glyphicon-new-window"></span> GET
                 </a>
             </div>
@@ -59,18 +59,18 @@ Author     : Ismael Martin Ramirez [imartinr01@informatica.iesvalledeljerteplase
     </div>
     </div>      
     <!--JSON-->
-    <div ng-if="jsonAyuntamiento" class="contenedorExport">
+    <div ng-if="jsonFormato" class="contenedorExport">
     <div class="container">
         <div class="row">
-            <div class="col-sm-3"><h3>Ayuntamiento de plasencia</h3></div>
+            <div class="col-sm-3"><h3>{{tituloExport}}</h3></div>
             <div class="col-sm-3"><h4>JSON</h4></div>
             <div class="col-sm-3">
-                 <a href="#!/gobierno/json" target="_blank" class="btn btn-info btn-lg col-xs-12">
+                 <a href="{{hrefJSON}}" target="_blank" class="btn btn-info btn-lg col-xs-12">
                  <span class="glyphicon glyphicon-new-window"></span> Ver en Web
                 </a>
             </div>
               <div class="col-sm-3">
-                 <a href="https://imartinr01.000webhostapp.com/OpenData/Plasencia/Ayuntamiento/Obtener_gobierno.php" target="_blank" class="btn btn-info btn-lg col-xs-12">
+                 <a href="{{urlJSON}}" target="_blank" class="btn btn-info btn-lg col-xs-12">
                  <span class="glyphicon glyphicon-new-window"></span> GET
                 </a>
             </div>
@@ -79,13 +79,13 @@ Author     : Ismael Martin Ramirez [imartinr01@informatica.iesvalledeljerteplase
     </div>
     </div>   
     <!--CSV-->
-    <div ng-if="csvAyuntamiento" class="contenedorExport">
+    <div ng-if="csvFormato" class="contenedorExport">
     <div class="container">
         <div class="row">
-            <div class="col-sm-4"><h3>Ayuntamiento de plasencia</h3></div>
+            <div class="col-sm-4"><h3>{{tituloExport}}</h3></div>
             <div class="col-sm-4"><h4>CSV</h4></div>
             <div class="col-sm-4">
-                 <a href="#!/gobierno/csv" target="_blank" class="btn btn-info btn-lg col-xs-12">
+                 <a href="{{hrefCSV}}" target="_blank" class="btn btn-info btn-lg col-xs-12">
                  <span class="glyphicon glyphicon-new-window"></span> Ver en Web
                 </a>
             </div>
@@ -94,13 +94,13 @@ Author     : Ismael Martin Ramirez [imartinr01@informatica.iesvalledeljerteplase
     </div>
     </div>
     <!--html-->
-    <div ng-if="htmlAyuntamiento" class="contenedorExport">
+    <div ng-if="htmlFormato" class="contenedorExport">
     <div class="container">
         <div class="row">
-            <div class="col-sm-4"><h3>Ayuntamiento de plasencia</h3></div>
+            <div class="col-sm-4"><h3>{{tituloExport}}</h3></div>
             <div class="col-sm-4"><h4>HTML</h4></div>
             <div class="col-sm-4">
-                 <a href="#!/gobierno/html" target="_blank" class="btn btn-info btn-lg col-xs-12">
+                 <a href="{{hrefHTML}}" target="_blank" class="btn btn-info btn-lg col-xs-12">
                  <span class="glyphicon glyphicon-new-window"></span> Ver en Web
                 </a>
             </div>

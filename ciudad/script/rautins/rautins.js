@@ -9,32 +9,68 @@ console.log("JS Rautins iniciado.")
             function($routeProvider){             
                 $routeProvider.           
             when('opendata/plasencia',{
-             templateUrl:'ciudad/plasencia/plasencia.html',
+             templateUrl:'ciudad/plasencia/inicio/gobierno.html',
            }).
-           when('/opendata/plasencia/gobierno',{
+           when('/gobierno',{
              templateUrl:'ciudad/plasencia/ayuntamiento/gobierno.html',
            }).
-           when('/opendata/plasencia/barrio',{
-             templateUrl:'ciudad/plasencia/barrio.html',
+           when('/barrio',{
+             templateUrl:'ciudad/plasencia/barrio/barrio.html',
            }).
-           when('/opendata/plasencia/organismosSociales',{
-             templateUrl:'ciudad/plasencia/organismo.html',
+           when('/organismosSociales',{
+             templateUrl:'ciudad/plasencia/organismo/organismo.html',
            }).
-            when('/opendata/plasencia/gobierno/xml',{
+            when('/gobierno/xml',{
              templateUrl:'ciudad/plasencia/ayuntamiento/export/xml.html',
            }).
-            when('/opendata/plasencia/gobierno/json',{
+            when('/gobierno/json',{
              templateUrl:'ciudad/plasencia/ayuntamiento/export/json.html',
            }).
-            when('/opendata/plasencia/gobierno/csv',{
+            when('/gobierno/csv',{
              templateUrl:'ciudad/plasencia/ayuntamiento/export/csv.html',
            }).
-            when('/opendata/plasencia/gobierno/html',{
+            when('/gobierno/html',{
              templateUrl:'ciudad/plasencia/ayuntamiento/export/html.html',
+           }).
+             when('/barrio/html',{
+             templateUrl:'ciudad/plasencia/barrio/export/html.html',
+           }).
+            when('/barrio/xml',{
+             templateUrl:'ciudad/plasencia/barrio/export/xml.html',
+           }).
+            when('/barrio/json',{
+             templateUrl:'ciudad/plasencia/barrio/export/json.html',
+           }).
+            when('/barrio/csv',{
+             templateUrl:'ciudad/plasencia/barrio/export/csv.html',
+           }).
+            when('/organismosSociales/xml',{
+             templateUrl:'ciudad/plasencia/organismo/export/xml.html',
+           }).
+            when('/organismosSociales/json',{
+             templateUrl:'ciudad/plasencia/organismo/export/json.html',
+           }).
+            when('/organismosSociales/csv',{
+             templateUrl:'ciudad/plasencia/organismo/export/csv.html',
+           }).
+            when('/organismosSociales/html',{
+             templateUrl:'ciudad/plasencia/organismo/export/html.html',
+           }).
+            when('/ciudadDePlasencia/xml',{
+             templateUrl:'ciudad/plasencia/inicio/export/xml.html',
+           }).
+            when('/ciudadDePlasencia/json',{
+             templateUrl:'ciudad/plasencia/inicio/export/json.html',
+           }).
+            when('/ciudadDePlasencia/csv',{
+             templateUrl:'ciudad/plasencia/inicio/export/csv.html',
+           }).
+            when('/ciudadDePlasencia/html',{
+             templateUrl:'ciudad/plasencia/inicio/export/html.html',
            }).
             otherwise({
              redirectTo:'/',
-             templateUrl:'ciudad/plasencia/inicio/cabecera.html',
+             templateUrl:'ciudad/plasencia/inicio/inicio.html',
            })
              
          }])

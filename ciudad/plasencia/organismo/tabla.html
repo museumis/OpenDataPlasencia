@@ -1,0 +1,25 @@
+<!-- 
+Created on : 15-abr-2018
+Author     : Ismael Martin Ramirez [imartinr01@informatica.iesvalledeljerteplasencia.es]
+-->
+<section ng-controller="org" class="container"> 
+    <div class="table-responsive">
+        <table class="table table-hover table-striped table-bordered">
+            <caption>Organismos Sociales de Plasencia</caption>
+
+                <tr>
+    <th>#</th>
+    <th ng-repeat="titulo in titulos">{{titulo}}</th>
+  
+  </tr>
+            
+    <tr ng-repeat="respuesta in tabla">
+     <th>{{$index+1}}</th>
+    <td>{{respuesta.col1}}</td>
+    <td>{{respuesta.col2}}</td>
+    <td>{{respuesta.col3}}</td>
+  </tr>
+  
+        </table> 
+    </div>
+</section>

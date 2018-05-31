@@ -2,7 +2,6 @@
 
 OpenData Plasencia es un portal web donde obtener información sobre la ciudad de Plasencia; su gobierno, sus barrios y asociaciones de vecinos e información sobre los organismos sociales, educativos o sanitario de la ciudad.
 
-
 Es un proyecto realizado con el fin de acercar a la ciudadanía de Plasencia información sobre la misma.
 
 Otro de sus objetivos es dar cobertura a desarrolladores de software que deseen implementar datos de Plasencia en sus proyectos. El portal da la posibilidad al cliente de generar datos de la ciudad en formato Xml, JSon, Html o Csv.

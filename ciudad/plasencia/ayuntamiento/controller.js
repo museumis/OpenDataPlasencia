@@ -243,28 +243,40 @@ app.controller("gobierno",function($scope,$http){
                $scope.xmlAyuntamiento = false
             
         }else{
-               $scope.xmlAyuntamiento = true
+                $scope.jsonAyuntamiento=false
+                $scope.htmlAyuntamiento=false
+                $scope.csvAyuntamiento=false
+                $scope.xmlAyuntamiento = true
         }
     }  
     $scope.verAyuntamientoJson = function(){
         if($scope.jsonAyuntamiento == true){
                $scope.jsonAyuntamiento = false
         }else{
-               $scope.jsonAyuntamiento = true
-        }
+                $scope.htmlAyuntamiento=false
+                $scope.csvAyuntamiento=false
+                $scope.xmlAyuntamiento = false
+                $scope.jsonAyuntamiento = true
+            }
     }  
     $scope.verAyuntamientoCsv = function(){
         if($scope.csvAyuntamiento == true){
                $scope.csvAyuntamiento = false
         }else{
-               $scope.csvAyuntamiento = true
+                $scope.jsonAyuntamiento=false
+                $scope.htmlAyuntamiento=false
+                $scope.xmlAyuntamiento = false
+                $scope.csvAyuntamiento = true
         }
     } 
     $scope.verAyuntamientoHtml = function(){
         if($scope.htmlAyuntamiento == true){
                $scope.htmlAyuntamiento = false
         }else{
-               $scope.htmlAyuntamiento = true
+                $scope.jsonAyuntamiento=false
+                $scope.xmlAyuntamiento = false
+                $scope.csvAyuntamiento = false
+                $scope.htmlAyuntamiento = true
         }
     } 
 
