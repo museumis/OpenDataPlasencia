@@ -3,22 +3,22 @@
  Author     : Ismael Martin Ramirez [imartinr01@informatica.iesvalledeljerteplasencia.es]
 */
 /*
-Controlador angular de la seccion Gobierno
+Controlador angular de la seccion Barrio
 -Gestion de tabla
 -Gestion de export a xml,json,csv y html
 */
 app.controller("barrio",function($scope,$http){   
     //-----------------------------------------------------------
-    /*Variables del controller (Clase gobierno)*/
+    /*Variables del controller (Clase barrio)*/
     //Array de titulos de tipos exportaciones 
     $scope.export = ["xml","json","csv","html"]    
-    //Array de titulos de la tabla
+    //Array de titulos de la tabla 
     $scope.titulos = [
         "Barrio","Asociacion","Direc","Telf",
         "Correo","CentroDeSalud","DirecCS",
         "TelefCS"
     ]
-    //Array de los gobernantes. Sera inyectado con la utilizacion de metodos en esta clase.
+    //Array de la tabla. Sera inyectado con la utilizacion de metodos en esta clase.
     $scope.tabla = [
         
     ]              
@@ -178,7 +178,7 @@ app.controller("barrio",function($scope,$http){
 
           return html;
           }
-    /*Funcion que inyecta los datos recibidos en el array $scope.gobernantes.
+    /*Funcion que inyecta los datos recibidos en el array $scope.nombreTabla.
     Esta accion carga la tabla que se muestra en el front de la web.
     */
     $scope.generarTabla = function(flujo){
@@ -212,19 +212,17 @@ app.controller("barrio",function($scope,$http){
     }   
       
     //-----------------------------------------------------------
-    /*Lammada al metodo que se conecta a la base de datos.
+    /*Lamada al metodo que se conecta a la base de datos.
     Esta accion se hace al terminar de leer este fichero.
-    Esta llama se hace en la primera carga.Es combeniente cambiar de lugar esta llamada.
-    Sin esta llamada, el front de la web gobierno NO FUNCIONARA.
+    Esta llama se hace en la primera carga. Es combeniente cambiar de lugar esta llamada.
+    Sin esta llamada, el front de la web NO FUNCIONARA.
     */
     $scope.cargarJsonFromUrl()
     //-----------------------------------------------------------
     /*Metodos para la gestion de la visualizacion de los export.
     Los click en las opciones de export muestran o ocultan distintos div.
     Esta accion se logra mediante estos metodos.
-    */
-    
-    //color export pulsado #babbbf no pulsado #d5d7db
+    */    
     $scope.verFormatoXml = function(){
         if($scope.xmlFormato == true){
                $scope.xmlFormato = false
